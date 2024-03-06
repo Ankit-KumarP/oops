@@ -16,7 +16,8 @@ interface Wings {
     void wingsDetails();
 }
 
-// class // Muntiple inhertance (Helicopter class extends both Wheel and Wings Intrface)
+// class // Muntiple inhertance (Helicopter class extends both Wheel and Wings
+// Intrface)
 class Helicopter implements Wheel, Wings {
     String diameter = "90cm";
 
