@@ -13,6 +13,10 @@ abstract class Dog {
         System.out.println("I AM A DOG.");
     }
 
+    void personal() {
+        System.out.println("INHERIT ME ONLY IF YOU WANT");
+    }
+
 }
 
 // class
