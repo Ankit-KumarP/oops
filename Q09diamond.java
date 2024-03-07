@@ -6,7 +6,7 @@ package oops;
 interface RBI {
     String name = "RBI";
 
-    default  void details() {
+    default void details() {
         System.out.println("I AM TOPPER");
     }
 }
@@ -19,19 +19,23 @@ interface SBI extends RBI {
 // PNB
 interface PNB extends RBI {
     String name = "PNB";
+
 }
 
 // HDFC
 class HDFC implements PNB, SBI {
     String name = "HDFC";
 
-     void about() {
-        details();
+    void about() {
+        PNB.super.details();
+        SBI.super.details();
     }
 }
 
 public class Q09diamond {
     public static void main(String[] args) {
 
+        HDFC h = new HDFC();
+        h.about();
     }
 }
