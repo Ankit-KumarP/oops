@@ -10,6 +10,10 @@ interface Eating {
         System.out.println("I am special methode with body bro.");
     }
 
+    default String special2() {
+        return "I AM ALSO SPECIAL.";
+    }
+
     void eating();
 }
 
@@ -23,7 +27,9 @@ interface Running {
 // class
 class Shyam implements Eating, Running {
 
+    
     public void eating() {
+       
         System.out.println("Shyam can eat " + Eating.kg + " KG rice.");
     }
 
@@ -39,5 +45,7 @@ public class Q08abstraction {
         sm.eating();
         sm.distance();
         Eating.special();
+        System.out.println(sm.special2()); 
+
     }
 }
